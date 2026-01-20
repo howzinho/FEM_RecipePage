@@ -1,4 +1,6 @@
-*, *:before, *:after{
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -26,13 +28,13 @@ body {
     color: var(--Stone600);
 }
 
-main{
+main {
     display: flex;
     justify-content: center;
     padding: 6%;
 }
 
-article{
+article {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -40,30 +42,35 @@ article{
     border-radius: 25px;
 }
 
-figure, header, .prep-time, .ingredients, .instructions, .nutrition{
+figure,
+header,
+.prep-time,
+.ingredients,
+.instructions,
+.nutrition {
     margin-left: 6%;
     margin-right: 6%;
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
 }
 
-figure{
+figure {
     margin-top: 6%;
     margin-bottom: 0;
 }
 
-.banner{
+.banner {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
     overflow: clip;
 }
 
-header{
+header {
     margin-top: 0;
 }
 
-h1{
+h1 {
     /*margin-top: 0.8rem;*/
     margin-bottom: 0.8rem;
     font-family: "Young Serif", serif;
@@ -73,7 +80,7 @@ h1{
     color: var(--Stone900);
 }
 
-h2{
+h2 {
     margin-top: 0.2rem;
     margin-bottom: 0.8rem;
     font-family: "Young Serif", serif;
@@ -83,7 +90,7 @@ h2{
     color: var(--Brown800);
 }
 
-p{
+p {
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 0;
@@ -91,33 +98,34 @@ p{
     font-size: 1rem;
 }
 
-header p{
+header p {
     margin-top: 1rem;
     margin-bottom: 1rem;
     line-height: 1.4rem;
     color: var(--Stone600);
 }
 
-ul{
+ul {
     font-size: 0.8rem;
     color: var(--Brown800);
     padding-left: 1.3rem;
-    line-height: 2.0rem;
+    line-height: 2rem;
 }
 
-ol{
-    font-size: 1.0rem;
+ol {
+    font-size: 1rem;
     color: var(--Brown800);
     padding-left: 1.3rem;
+    margin-left: 0.3rem;
     font-weight: 700;
     line-height: 1.6rem;
 }
 
-li{
+li {
     padding-left: 1.3rem;
 }
 
-hr{
+hr {
     margin-top: 0;
     margin-bottom: 0;
     border: 1px;
@@ -127,7 +135,7 @@ hr{
     border-top-style: solid;
 }
 
-table{
+table {
     margin-top: 1rem;
     margin-bottom: 1rem;
     width: 100%;
@@ -135,23 +143,24 @@ table{
     border-bottom: hidden;
 }
 
-tr{
+tr {
     border-bottom: 1px;
     border-bottom-style: solid;
     border-color: var(--Stone150);
 }
 
-th, td{
+th,
+td {
     text-align-last: left;
     line-height: 3rem;
 }
 
-th{
+th {
     padding-left: 2rem;
     font-weight: 400;
 }
 
-td{
+td {
     width: 50%;
     font-weight: 700;
     color: var(--Brown800);
@@ -165,14 +174,14 @@ footer a {
     color: hsl(228, 45%, 44%);
 }
 
-.prep-time{
+.prep-time {
     margin-top: 0.5rem;
     padding: 3.5%;
     background-color: var(--Rose50);
     border-radius: 0.8rem;
 }
 
-.prep-time h2{
+.prep-time h2 {
     font-family: "Outfit", sans-serif;
     font-size: 1.25rem;
     color: var(--Rose800);
@@ -180,17 +189,64 @@ footer a {
     margin: 0;
 }
 
-.prep-time ul{
+.prep-time ul {
     margin-top: 0.5rem;
     margin-bottom: 0;
     color: var(--Rose800);
 }
 
-.prep-time p{
+.prep-time p {
     color: var(--Stone600);
     margin: 0;
 }
 
-.instructions p{
+.instructions p {
     margin-bottom: 0.4rem;
+}
+
+@media (max-width: 375px) {
+    body {
+        font-style: normal;
+        font-size: 16px;
+        margin: 0;
+    }
+    main {
+        display: flex;
+        padding: 0;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        flex-basis: 100%;
+        flex-grow: 1;
+        border-radius: 0;
+    }
+    figure{
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .banner{
+        border-radius: 0;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.6rem;
+    }
+    .ingredients ul{
+        padding-left: 0;
+    }
+    .ingredients li{
+        max-width: 375px;
+        display: flex;
+        align-items: center;
+    }
+    .ingredients li:before{
+        content: "\2022";
+        margin-right: 1rem;
+    }
 }
